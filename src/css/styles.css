@@ -325,18 +325,89 @@ body {
   padding: 1em 0; }
   @media screen and (min-width: 1024px) {
     .header {
-      background-color: royalblue;
       grid-column: 2/-1;
-      grid-row: 1/2; } }
+      grid-row: 1/2;
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
+
+.logo {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0.35rem;
+  left: 0.3rem; }
+  .logo__img {
+    max-width: 100%; }
+  @media screen and (min-width: 1024px) {
+    .logo {
+      position: absolute;
+      left: 2%;
+      top: 2rem;
+      width: 10%; } }
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 70px; }
+  .topbar__icon {
+    width: 90px;
+    display: flex;
+    justify-content: space-around; }
+  @media screen and (min-width: 1024px) {
+    .topbar {
+      height: 60px;
+      width: 35vw;
+      left: 100%;
+      transform: translateX(-100%);
+      justify-content: space-evenly; } }
+  @media screen and (min-width: 1400px) {
+    .topbar {
+      width: 15vw; } }
+
+.toggle-menu {
+  height: 50px;
+  width: 40px; }
+  .toggle-menu__icon {
+    height: 50px;
+    width: 40px;
+    position: relative; }
+    .toggle-menu__icon .first-bar,
+    .toggle-menu__icon .second-bar,
+    .toggle-menu__icon .third-bar {
+      width: 30px;
+      height: 3px;
+      position: absolute;
+      border-radius: 5px;
+      background-color: #ccc; }
+    .toggle-menu__icon .first-bar {
+      top: 15px; }
+    .toggle-menu__icon .second-bar {
+      top: 25px; }
+    .toggle-menu__icon .third-bar {
+      top: 35px; }
+    @media screen and (min-width: 1024px) {
+      .toggle-menu__icon {
+        display: none; } }
 
 @media screen and (min-width: 1024px) {
   .sidebar {
-    background-color: salmon;
+    background-color: #343434;
     grid-column: 1/2;
     grid-row: 1/-1; } }
 
 @media screen and (min-width: 1024px) {
   .main {
-    background-color: seagreen;
     grid-column: 2 / 3;
     grid-row: 2 / 3; } }
