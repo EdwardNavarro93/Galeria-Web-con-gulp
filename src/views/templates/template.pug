@@ -10,11 +10,11 @@ html(lang="en")
         header#header.header
             a(href="./").logo
                 img(src="./assets/img/logo.png", alt="web logo")
-            .topbar
-                .topbar__icon
+            #topbar.topbar
+                .topbar__icon(data-type="login")
                     i.fa.fa-user
                     span Login
-                .topbar__icon
+                .topbar__icon(data-type="register")
                     i.fa.fa-user-plus
                     span Register
                 .toggle-menu
@@ -24,6 +24,8 @@ html(lang="en")
                         .third-bar 
         #sidebar.sidebar
             block menu 
-        main.main 
+        main.main
+        include ../includes/login-modal 
+        include ../includes/register-modal
         script(src="https://kit.fontawesome.com/e57be5d678.js", crossorigin="anonymous") <!-- uso de la fuente font awesome para iconos web-->
         script(src="js/scripts.js")

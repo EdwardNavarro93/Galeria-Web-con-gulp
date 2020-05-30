@@ -1,0 +1,17 @@
+//contenedor modal de toda la ventada
+#register-modal.lightbox
+
+    //formulario de registro
+    form#register-form.form(action="#")
+        .form__field
+            label(for="register-email").form__label Email
+            input(type="email", name="email")#register-email.form__input
+        .form__field
+            label(for="register-password").form__label Password
+            input(type="password", name="password")#register-password.form__input
+        .form__field
+            label(for="register-password-2").form__label Confirm password
+            input(type="password", name="password-2")#register-password-2.form__input
+        .form__field
+            input(type="submit", name="button", value="send").form__submit
+        

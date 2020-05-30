@@ -8,9 +8,9 @@
   </head>
   <body>
     <header class="header" id="header"><a class="logo" href="./"><img src="./assets/img/logo.png" alt="web logo"/></a>
-      <div class="topbar">
-        <div class="topbar__icon"><i class="fa fa-user"></i><span>Login</span></div>
-        <div class="topbar__icon"><i class="fa fa-user-plus"></i><span>Register</span></div>
+      <div class="topbar" id="topbar">
+        <div class="topbar__icon" data-type="login"><i class="fa fa-user"></i><span>Login</span></div>
+        <div class="topbar__icon" data-type="register"><i class="fa fa-user-plus"></i><span>Register</span></div>
         <div class="toggle-menu">
           <div class="toggle-menu__icon" id="toggle-menu">
             <div class="first-bar"> </div>
@@ -32,7 +32,43 @@
         </ul>
       </nav>
     </div>
-    <main class="main"> </main>
+    <main class="main"></main>
+    <div class="lightbox" id="login-modal">
+      <form class="form" id="login-form" action="#">
+        <div class="form__field">
+          <label class="form__label" for="login-email">Email</label>
+          <input class="form__input" type="email" name="email" id="login-email"/>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="login-password">Password</label>
+          <input class="form__input" type="password" name="password" id="login-password"/>
+        </div>
+        <div class="form__field">
+          <input class="form__submit" type="submit" name="button" value="send"/>
+        </div>
+      </form>
+    </div>
+    <!--contenedor modal de toda la ventada-->
+    <div class="lightbox" id="register-modal">
+      <!--formulario de registro-->
+      <form class="form" id="register-form" action="#">
+        <div class="form__field">
+          <label class="form__label" for="register-email">Email</label>
+          <input class="form__input" type="email" name="email" id="register-email"/>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="register-password">Password</label>
+          <input class="form__input" type="password" name="password" id="register-password"/>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="register-password-2">Confirm password</label>
+          <input class="form__input" type="password" name="password-2" id="register-password-2"/>
+        </div>
+        <div class="form__field">
+          <input class="form__submit" type="submit" name="button" value="send"/>
+        </div>
+      </form>
+    </div>
     <script src="https://kit.fontawesome.com/e57be5d678.js" crossorigin="anonymous"><!-- uso de la fuente font awesome para iconos web--></script>
     <script src="js/scripts.js"></script>
   </body>
