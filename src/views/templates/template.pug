@@ -25,7 +25,10 @@ html(lang="en")
         #sidebar.sidebar
             block menu 
         main.main
+            block title
+            block main
         include ../includes/login-modal 
         include ../includes/register-modal
+        block scripts
         script(src="https://kit.fontawesome.com/e57be5d678.js", crossorigin="anonymous") <!-- uso de la fuente font awesome para iconos web-->
         script(src="js/scripts.js")

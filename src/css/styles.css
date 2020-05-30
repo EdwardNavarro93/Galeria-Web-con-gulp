@@ -474,10 +474,13 @@ body {
   .sidebar.show {
     transform: translateY(0); }
 
-@media screen and (min-width: 1024px) {
-  .main {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3; } }
+.main {
+  padding: 0.5rem 1rem; }
+  @media screen and (min-width: 1024px) {
+    .main {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      padding: 0 2rem; } }
 
 .lightbox {
   position: fixed;
@@ -527,3 +530,12 @@ body {
     transition: transform 0.2s; }
     .form__submit:active, .form__submit:focus {
       transform: scale(0.9); }
+
+.title {
+  padding: 0 0 0.5rem;
+  border-bottom: 1px solid var(--text-color);
+  text-align: left; }
+  @media screen and (min-width: 1024px) {
+    .title {
+      padding: 0.5rem 0;
+      border-top: 1px solid var(--text-color); } }
