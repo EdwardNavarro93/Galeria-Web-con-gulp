@@ -1,11 +1,22 @@
-//es importante que los mixins esten arriba del todo
-@import 'mixins/breakpoints.scss';
+//configuracion guias de estilo
+@import 'config/colors.scss';
+@import 'config/fonts.scss';
 
+//mixins o funciones
+//importante que los mixins esten arriba
+
+@import 'mixins/breakpoints.scss';
+@import 'mixins/reset-list.scss';
+
+//estilos base
 @import 'base/normalize';
 @import 'base/base';
+
+//bloques
 @import 'blocks/header.scss';
 @import 'blocks/logo.scss';
 @import 'blocks/topbar.scss';
 @import 'blocks/togglemenu.scss';
-@import 'blocks/aside.scss';
+@import 'blocks/menu.scss';
+@import 'blocks/sidebar.scss';
 @import 'blocks/main.scss'

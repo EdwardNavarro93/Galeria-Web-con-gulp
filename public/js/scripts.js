@@ -1,1 +1,1 @@
-"use strict";console.log("la pagina esta funcionando");
+"use strict";var toggleMenu=document.getElementById("toggle-menu"),sidebar=document.getElementById("sidebar");toggleMenu.addEventListener("click",(function(e){"toggle-menu"!=e.target.id&&"toggle-menu"!=e.target.parentElement.id||(sidebar.classList.toggle("show"),toggleMenu.classList.toggle("show"))}));

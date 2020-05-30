@@ -1,3 +1,4 @@
+include ../config/config
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -7,7 +8,7 @@ html(lang="en")
         link(rel="stylesheet", href="css/styles.css")
     body
         header#header.header
-            a(href="/").logo
+            a(href="./").logo
                 img(src="./assets/img/logo.png", alt="web logo")
             .topbar
                 .topbar__icon
@@ -21,6 +22,8 @@ html(lang="en")
                         .first-bar 
                         .second-bar
                         .third-bar 
-        aside#sidebar.sidebar 
+        #sidebar.sidebar
+            block menu 
         main.main 
         script(src="https://kit.fontawesome.com/e57be5d678.js", crossorigin="anonymous") <!-- uso de la fuente font awesome para iconos web-->
+        script(src="js/scripts.js")

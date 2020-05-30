@@ -14,25 +14,38 @@
             height: 3px;
             position: absolute;
             border-radius: 5px;
-            background-color: #ccc;
+            background-color: $text-color;
         }
 
-        & .first-bar{
-            top: 15px;
-        }
+        &{
+            .first-bar{
+                top: 15px;
+            }
+            .second-bar{
+                top: 25px;
+            }
+            .third-bar{
+                top: 35px;
+            }
+        } 
+    }
 
-        & .second-bar{
-            top: 25px;
+    & .show {
+        .first-bar{
+            transform: rotate(-45deg);
+            top: 1.5rem;
         }
-
-        & .third-bar{
-            top: 35px;
+        .second-bar{
+            width: 0;
         }
+        .third-bar{
+            transform: rotate(45deg);
+            top: 1.5rem;
+        }
+    }
 
     @include laptop{
         display: none;
-    }
-
     }
 }
 
