@@ -1,19 +1,8 @@
-body{
-    background-color: coral;;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+//es importante que los mixins esten arriba del todo
+@import 'mixins/breakpoints.scss';
 
-h1{
-    color: white;
-}
-
-.blue{
-    color: cyan;
-}
-
-.red{
-    color: chartreuse;
-}
+@import 'base/normalize';
+@import 'base/base';
+@import 'blocks/header.scss';
+@import 'blocks/aside.scss';
+@import 'blocks/main.scss'
