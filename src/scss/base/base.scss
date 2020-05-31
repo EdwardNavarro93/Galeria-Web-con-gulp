@@ -6,7 +6,8 @@ body{
 
     @include laptop{
         display: grid;
-        grid-template-columns: 15% 85%;
+        grid-template-columns: 12% 88%;
         grid-template-rows: 60px 1fr;
+        overflow: hidden;
     }
 }

@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<!--Plantilla general de todas las paginas-->
+<!-- array para contruir el menu-->
+<!-- variable que indica en que pagina se encuentra el usuario--><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -9,9 +11,9 @@
   <body>
     <header class="header" id="header"><a class="logo" href="./"><img src="./assets/img/logo.png" alt="web logo"/></a>
       <div class="topbar" id="topbar">
-        <div class="topbar__icon" data-type="login"><i class="fa fa-user"></i><span>Login</span></div>
+        <div class="topbar__icon" data-type="login"><i class="fa fa-user">  <!--uso de la tipografia especial para iconos web (fontawesome.com)--></i><span>Login</span></div>
         <div class="topbar__icon" data-type="register"><i class="fa fa-user-plus"></i><span>Register</span></div>
-        <div class="toggle-menu">
+        <div class="toggle-menu">     <!--menu desplegable para uso en navegadores moviles-->
           <div class="toggle-menu__icon" id="toggle-menu">
             <div class="first-bar"> </div>
             <div class="second-bar"></div>
@@ -27,15 +29,43 @@
           </li>
           <li class="main-menu__item"><a class="main-menu__link" href="./about.html">about</a>
           </li>
-          <li class="main-menu__item"><a class="main-menu__link" href="./contact.html">contact</a>
+          <li class="main-menu__item"><a class="main-menu__link main-menu__link--active" href="./contact.html">contact</a>
           </li>
         </ul>
       </nav>
     </div>
     <main class="main">
       <h1 class="title">Contact</h1>
+      <div class="contact">
+        <div class="contact__form">
+          <form class="form-contact" action="#">
+            <div class="form-contact__fields">
+              <input class="form-contact__input" type="text" name="name" placeholder="name"/>
+              <input class="form-contact__input" type="email" name="email" placeholder="email"/>
+              <input class="form-contact__input" type="text" name="subject" placeholder="subject"/>
+            </div>
+            <div class="form-contact__field">
+              <textarea class="form-contact__textarea" name="message" placeholder="message"></textarea>
+            </div>
+          </form>
+          <div class="form-contact__field">
+            <input class="form__submit" type="submit" value="send"/>
+          </div>
+        </div>
+        <div class="contact__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63778.383704250766!2d-76.63495373715074!3d2.457470245296637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e300311c028d47d%3A0x880bd67f0987a54e!2zUG9wYXnDoW4sIENhdWNh!5e0!3m2!1sen!2sco!4v1590951094599!5m2!1sen!2sco" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="social">
+          <div class="social__icon"><i class="fab fa-twitter-square"></i><i class="fab fa-twitter-square"></i></div>
+          <div class="social__icon"><i class="fab fa-instagram"></i><i class="fab fa-instagram"></i></div>
+          <div class="social__icon"><i class="fab fa-youtube-square"></i><i class="fab fa-youtube-square"></i></div>
+          <div class="social__icon"><i class="fab fa-pinterest-square"></i><i class="fab fa-pinterest-square"></i></div>
+        </div>
+      </div>
     </main>
+    <!--contenedor modal de toda la ventada-->
     <div class="lightbox" id="login-modal">
+      <!--formulario de Login-->
       <form class="form" id="login-form" action="#">
         <div class="form__field">
           <label class="form__label" for="login-email">Email</label>
@@ -71,7 +101,7 @@
         </div>
       </form>
     </div>
-    <script src="https://kit.fontawesome.com/e57be5d678.js" crossorigin="anonymous"><!-- uso de la fuente font awesome para iconos web--></script>
+    <script src="https://kit.fontawesome.com/e57be5d678.js" crossorigin="anonymous"><!-- importacion de la fuente font awesome para iconos web--></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

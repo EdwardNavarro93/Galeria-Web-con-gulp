@@ -1,5 +1,5 @@
 //implementacion de la libreria macy que permite moldear como se veran los elementos de l galeria
-
+// configuracion (ver documentacion MACY JS)
 document.getElementById('gallery') &&
     new Macy({
         container: '#gallery',

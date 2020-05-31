@@ -1,0 +1,13 @@
+.gallery{
+    &__item{
+        @include laptop{
+            position: relative;
+            &:hover{
+                position: absolute;
+                transform: scale(1.25);
+                transition: transform .5s;
+                z-index: 100;
+            }
+        }
+    }
+}

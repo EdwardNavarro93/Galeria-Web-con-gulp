@@ -1,8 +1,17 @@
+//creacion del menu principal
 nav#main-nav.main-nav
     ul#main-menu.main-menu
         each page, index in pages
-            li.main-menu__item
-                if index==0
-                    a(href='./').main-menu__link= page
-                else
-                    a(href=`./${page}.html`).main-menu__link= page
+            if page == pageActive  //cuando se encuentre en la pagina se le agregara la clase active al link 
+                li.main-menu__item
+                    if index==0
+                        a(href='./').main-menu__link.main-menu__link--active= page
+                    else
+                        a(href=`./${page}.html`).main-menu__link.main-menu__link--active= page
+
+            else
+                li.main-menu__item
+                    if index==0
+                        a(href='./').main-menu__link= page
+                    else
+                        a(href=`./${page}.html`).main-menu__link= page

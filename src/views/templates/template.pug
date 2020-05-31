@@ -1,3 +1,4 @@
+// Plantilla general de todas las paginas
 include ../config/config
 <!DOCTYPE html>
 html(lang="en")
@@ -12,12 +13,12 @@ html(lang="en")
                 img(src="./assets/img/logo.png", alt="web logo")
             #topbar.topbar
                 .topbar__icon(data-type="login")
-                    i.fa.fa-user
+                    i.fa.fa-user   <!--uso de la tipografia especial para iconos web (fontawesome.com)-->
                     span Login
                 .topbar__icon(data-type="register")
                     i.fa.fa-user-plus
                     span Register
-                .toggle-menu
+                .toggle-menu      <!--menu desplegable para uso en navegadores moviles-->
                     #toggle-menu.toggle-menu__icon
                         .first-bar 
                         .second-bar
@@ -30,5 +31,5 @@ html(lang="en")
         include ../includes/login-modal 
         include ../includes/register-modal
         block scripts
-        script(src="https://kit.fontawesome.com/e57be5d678.js", crossorigin="anonymous") <!-- uso de la fuente font awesome para iconos web-->
+        script(src="https://kit.fontawesome.com/e57be5d678.js", crossorigin="anonymous") <!-- importacion de la fuente font awesome para iconos web-->
         script(src="js/scripts.js")

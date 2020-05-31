@@ -28,7 +28,6 @@ if(loginModal){ //siempre es importante preguntar si existe el elemento antes de
     })
 }
 
-
 if(registerModal){ 
     registerModal.addEventListener('click', (e)=>{
         if(e.target.classList.contains('lightbox')){ 
@@ -37,6 +36,8 @@ if(registerModal){
     })
 }
 
+
+//prevenir que se envie el formulario 
 if(loginForm){
     loginForm.addEventListener('submit', (e)=>{
         e.preventDefault()
